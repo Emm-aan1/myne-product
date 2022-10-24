@@ -203,6 +203,13 @@
     margin: 5px 0 10px;
     font-size: 27px;
   }
+  
+ .about .about-para {
+    width: 280px;
+    margin: auto;
+    padding: 0 5px;
+    font-size: 12px;
+  }
 
   .about p {
     padding: 0 5px;
