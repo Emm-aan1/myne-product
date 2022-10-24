@@ -216,27 +216,27 @@
   }
 
   .card {
-    width: 5.5em;
-    height: 8.2em;
+    width: 6.4em;
+    height: 12em;
     box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.153);
     margin: auto;
     padding: 0;
   }
 
   .card img {
-    width: 1.5em;
-    height: 1.5em;
-    margin: 5px 0 -5px;
+    width: 2em;
+    height: 2em;
+    margin: 5px 0 -2px;
   }
 
   .card h3 {
-    margin: 0 1px 3px;
+    margin: 0 1px 5px;
     color: rgba(85, 71, 15, 0.95);
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .card p {
-    font-size: 7px;
+    font-size: 11px;
     font-weight: bold;
   }
 
