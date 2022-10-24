@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myne</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="@media.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+  <script src="https://kit.fontawesome.com/6e274c4be9.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--  Header Section  -->
+  <header class="header">
+    <nav>
+      <a href="index.html"><img class="logo" src="images/logo.jpg"></a>
+
+      <h1> <em>MYNE</em></h1>
+
+      <div id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="#"><i class="fa-sharp fa-solid fa-cart-shopping cart"></i></a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" id="menu-icon" onclick="showMenu()"></i>
+    </nav>
+  </header>
+
+  <script>
+    var navLinks = document.getElementById('navLinks');
+
+    function showMenu() {
+      navLinks.style.right = '0'
+    }
+    function hideMenu() {
+      navLinks.style.right = '-7.5em'
+    }
+  </script>
+
+
+
+  <!--  Product Section Content -->
+  <section class="head-content">
+    <div class='item'>
+      <div class='item_image-box'>
+        <div class='item__image-link'>
+          <img class='item_image1' src='images/oil.png'>
+        </div>
+        <p> Myne Essence Oil </p>
+        <br>
+        <div><span>No Reviews</span> &lpar;0&rpar;</div>
+      </div>
+      <button type='button' class='item_button'>
+        ADD TO
+        CART
+      </button>
+    </div>
+
+    <div class='item'>
+      <div class='item_image-box'>
+        <div class='item__image-link'>
+          <img class='item_image2' src='images/cream.png'>
+        </div>
+        <p> Myne Polish Cream </p>
+        <br>
+        <div><span>No Reviews</span> &lpar;0&rpar;</div>
+      </div>
+      <button type='button' class='item_button'>
+        ADD TO
+        CART
+      </button>
+    </div>
+
+    <div class='item'>
+      <div class='item_image-box'>
+        <div class='item__image-link'>
+          <img class='item_image3' src='images/scrub.png'>
+        </div>
+        <p> Myne Recovery Scrub </p>
+        <br>
+        <div><span>No Reviews</span> &lpar;0&rpar;</div>
+      </div>
+      <button type='button' class='item_button'>
+        ADD TO
+        CART
+      </button>
+    </div>
+
+    <div class='item'>
+      <div class='item_image-box'>
+        <div class='item__image-link'>
+          <img class='item_image4' src='images/full-pack.png'>
+        </div>
+        <div>
+        </div>
+        <p> Myne Full Package </p>
+        <br>
+        <div><span>No Reviews</span> &lpar;0&rpar;</div>
+      </div>
+      <button type='button' class='item_button'>
+        ADD TO
+        CART
+      </button>
+    </div>
+  </section>
+
+
+  <!--  Review Section  -->
+  <section class="reviews" id="reviews">
+    <h3>Share Your Experience Here</h3>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img class="img-view" src="images/review.JPG">
+      </div>
+      <div class="mySlides">
+        <img class="img-view" src="images/review2.JPG">
+      </div>
+      <div class="mySlides">
+        <img class="img-view" src="images/review3.JPG">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <btton type='button' class='review_button'>
+      Add Yours
+    </btton>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </section>
+
+
+  <!--  Skin Care -->
+  <section class="skin-care">
+    <i class="fa-solid fa-users"></i>
+    <p>SKIN CARE FOR ALL</p>
+  </section>
+
+
+  <!--  Footer Section  -->
+  <section class="footer" id="footer">
+    <p class="myne">#myne</p>
+    <div class="socials">
+      <i class="fa-brands fa-twitter fa"></i>
+      <i class="fa-brands fa-facebook-f fa"></i>
+      <i class="fa-brands fa-instagram fa"></i>
+      <i class="fa-solid fa-phone-flip fa"></i>
+    </div>
+    <p>
+      All Rights Reserved &copy; 2022 | Myne <br>
+      #StayBeautify
+    </p>
+    <div class="subscribe">
+      <p>Subscribe for More Deals</p>
+      <input type="email" name="Email" placeholder="Email" id="email"><br>
+      <input type="submit" value="Sign Up" name="submit" class="sign-up">
+    </div>
+    <div class="footer-bottom">
+      <p>FAQ</p>
+      <p><a href="about.html">About</a> </p>
+    </div>
+  </section>
+
+</body>
+
+</html>
