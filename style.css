@@ -333,7 +333,7 @@ nav .fa {
   margin: auto;
   padding-top: 70px;
   text-align: center;
-  background-image: linear-gradient(rgba(226, 222, 205, 0.897), rgba(226, 222, 205, 0.458)), url(images/about-background.jpg);
+  background-image: linear-gradient(rgba(226, 222, 205, 0.458), rgba(226, 222, 205, 0.458)), url(images/about-background.jpg);
 }
 
 .about h2 {
